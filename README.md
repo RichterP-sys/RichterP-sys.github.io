@@ -1,66 +1,111 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# MPCMS — Cooperative Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A web-based Cooperative Management System built with **Laravel** (PHP) and **Tailwind CSS**, hosted via GitHub Pages at [mpcms.me](https://mpcms.me).
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## How to Upload Your VS Code Project Files to This Repository
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Follow these steps to push all your project files from VS Code to this GitHub repository.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Prerequisites
 
-## Learning Laravel
+- [Git](https://git-scm.com/downloads) installed on your computer
+- [VS Code](https://code.visualstudio.com/) with the built-in **Source Control** panel
+- A GitHub account with access to this repository
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Option A — Using VS Code's Built-in Git UI
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. **Open your project folder** in VS Code (`File → Open Folder`).
+2. Click the **Source Control icon** in the left sidebar (or press `Ctrl+Shift+G`).
+3. If the folder is not yet a Git repository, click **"Initialize Repository"**.
+4. **Stage all files** by clicking the **+** next to *Changes* (or individual files).
+5. Enter a **commit message** in the text box (e.g. `Add project files`).
+6. Click the **✓ Commit** button.
+7. Click **"Publish Branch"** (or **"Push"**) to upload to GitHub.
+   - If prompted, sign in to GitHub and authorize VS Code.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Option B — Using the Terminal Inside VS Code
 
-### Premium Partners
+Open the integrated terminal in VS Code (`` Ctrl+` `` or `View → Terminal`) and run:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+```bash
+# 1. Navigate to your project folder (if not already there)
+cd /path/to/your/project
 
-## Contributing
+# 2. Initialize a Git repository (skip if already initialized)
+git init
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# 3. Connect to this GitHub repository
+git remote add origin https://github.com/RichterP-sys/RichterP-sys.github.io.git
 
-## Code of Conduct
+# 4. Stage all files
+git add .
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# 5. Create your first commit
+git commit -m "Add project files"
 
-## Security Vulnerabilities
+# 6. Push to GitHub
+git push -u origin main
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+> **Tip:** If your default branch is named `master` instead of `main`, replace `main` with `master` in the last command.
+
+---
+
+### What Gets Ignored
+
+A `.gitignore` file is already configured to exclude files that should **not** be committed:
+
+| Excluded | Reason |
+|---|---|
+| `vendor/` | PHP dependencies — run `composer install` locally |
+| `node_modules/` | JS dependencies — run `npm install` locally |
+| `.env` | Contains secrets (database passwords, API keys) |
+| `storage/*.key` | Application encryption keys |
+
+---
+
+### Recommended VS Code Extensions
+
+A `.vscode/extensions.json` file is included. When you open this project in VS Code, it will suggest installing:
+
+- **PHP Intelephense** — PHP code intelligence
+- **Laravel Blade Snippets** — Blade template support
+- **Tailwind CSS IntelliSense** — Autocomplete for Tailwind classes
+- **Prettier** — Code formatting
+- **Live Server** — Preview HTML files in the browser
+
+---
+
+## Local Development Setup
+
+```bash
+# Install PHP dependencies
+composer install
+
+# Install JS dependencies
+npm install
+
+# Copy environment file and generate app key
+cp .env.example .env
+php artisan key:generate
+
+# Run database migrations
+php artisan migrate
+
+# Start development server
+php artisan serve
+```
+
+Then visit `http://localhost:8000` in your browser.
+
+---
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
